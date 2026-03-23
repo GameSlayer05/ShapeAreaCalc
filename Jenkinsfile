@@ -4,7 +4,7 @@ pipeline {
         stage('Run Script') {
             steps {
                 // Execute a python file directly from the workspace
-                withPythonEnv('/path/to/venv/bin') {
+                withPythonEnv('/usr/bin/python') {
                     sh 'python unit_test.py'
                 }
             }
