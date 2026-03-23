@@ -1,20 +1,10 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
+        stage('Run Script') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                // Execute a python file directly from the workspace
+                sh 'python3 unit_test.py'
             }
         }
     }
