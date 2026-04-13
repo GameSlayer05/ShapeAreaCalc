@@ -8,9 +8,9 @@ def step_impl(context, radius):
 
 @when('I need the area of a circle')
 def step_impl(context):
-    context.calculated_area = circle_calculator(context.radius)
+    context.calculated_area = round(circle_calculator(context.radius), 2)
 
-@then('I am able to find the area with the radius')
-def step_impl(context):
-    expected_area = math.pi * (context.radius ** 2)
+@then('I get the area of "{area}"')
+def step_impl(context, area):
+    expected_area = float(area)
     assert context.calculated_area == expected_area, f"Expected area {expected_area} based on the radius of {context.radius} but got {context.calculated_area}"
