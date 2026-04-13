@@ -8,7 +8,7 @@ pipeline {
                 echo 'Installing dependencies...'
                 sh 'python3 -m venv venv'
                 sh ' . venv/bin/activate'
-                sh 'venv/bin/pip3 instal -r requirements.txt'
+                sh 'venv/bin/pip3 install -r requirements.txt'
             }
         }
         stage('Run Unit Tests') {
