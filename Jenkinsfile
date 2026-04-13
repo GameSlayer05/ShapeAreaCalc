@@ -1,7 +1,6 @@
 pipeline {
     agent {
-        docker { image 'python:3.9-slim'            
-        }
+        label 'Jenkins-Agent-Python'
     }
     stages {
         stage('Run Script') {
