@@ -4,7 +4,7 @@ import math
 
 @given('Radius of "{radius}"')
 def step_impl(context, radius):
-    context.radius = radius
+    context.radius = float(radius)
 
 @when('I need the area of a circle')
 def step_impl(context):
