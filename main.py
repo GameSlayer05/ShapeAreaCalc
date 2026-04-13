@@ -1,10 +1,4 @@
-import math
-
-def circle_calculator (radius):
-    if radius < 0:
-        raise ValueError("Radius cannot be negative.")
-    area = math.pi * (radius ** 2)
-    return area
+from shapes.calculate_area import circle_calculator
 
 if __name__ == '__main__':
     radius = float(input("Input the radius: "))
