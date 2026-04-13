@@ -4,3 +4,8 @@ Scenario: Calculate the are of a circle
     Given Radius of "2"
     When I need the area of a circle
     Then I get the area of "12.57"
+
+Scenario: Calculate the are of a circle
+    Given Radius of "3"
+    When I need the area of a circle
+    Then I get the area of "28.27"
