@@ -28,7 +28,7 @@ pipeline {
         stage ('Deployment'){
             steps{
                 echo 'Deploying....'
-                sh 'venv/bin/ansible-playbook playbook.yml'
+                ansiblePlaybook credentialsId: 'jenkinsAns', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'hosts', playbook: 'playbook.yml', vaultTmpPath: ''
             }
         }
     }

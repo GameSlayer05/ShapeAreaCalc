@@ -5,3 +5,4 @@ def circle_calculator (radius):
         raise ValueError("Radius cannot be negative.")
     area = math.pi * (radius ** 2)
     return area
+

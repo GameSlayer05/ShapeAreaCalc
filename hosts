@@ -1,0 +1,3 @@
+[fortnite]
+192.168.1.53 ansible_user=zorin1
+192.168.1.52 ansible_user=zorin1

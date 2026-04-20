@@ -1,2 +1,12 @@
 ---
-- hosts: Fortnite
+- name: Transer folder to remote
+  hosts: fortnite
+  tasks:
+    - name: Copy file
+      ansible.builtin.copy:
+        src: main.py
+        dest: /usr/bin/ShapesCalc/main.py
+    - name: Copy folder
+      ansible.builtin.copy:
+        src: shapes/
+        dest: /usr/bin/ShapesCalc/shapes/
