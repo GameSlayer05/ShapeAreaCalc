@@ -28,6 +28,7 @@ pipeline {
         stage ('Deployment'){
             steps{
                 echo 'Deploying....'
+                sh 'ping -c 3 192.168.1.52'
                 ansiblePlaybook credentialsId: 'jenkinsAns', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'hosts', playbook: 'playbook.yml', vaultTmpPath: ''
             }
         }
