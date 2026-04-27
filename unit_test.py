@@ -38,7 +38,7 @@ class TestRectangleArea(unittest.TestCase):
     def test_negative_length(self):
         # Test that negative length raises a ValueError
         with self.assertRaises(ValueError):
-            rectangle_calculator(-1)
+            rectangle_calculator(-1,1)
 
 if __name__ == '__main__':
     unittest.main()
