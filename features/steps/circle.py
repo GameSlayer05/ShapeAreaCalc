@@ -10,7 +10,7 @@ def step_impl(context, radius):
 def step_impl(context):
     context.calculated_area = round(circle_calculator(context.radius), 2)
 
-@then('I get the area of "{area}"')
+@then('I get the circle area of "{area}"')
 def step_impl(context, area):
     expected_area = float(area)
     assert context.calculated_area == expected_area, f"Expected area {expected_area} based on the radius of {context.radius} but got {context.calculated_area}"
